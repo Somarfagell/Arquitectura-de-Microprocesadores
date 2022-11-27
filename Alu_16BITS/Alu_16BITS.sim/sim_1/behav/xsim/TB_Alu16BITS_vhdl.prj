@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Alu_16BITS.srcs/sources_1/imports/Archivos Memoria/paqueteALU1bit.vhd" \
+"../../../../Alu_16BITS.srcs/sources_1/imports/Archivos Memoria/ALU16BITS.vhd" \
+"../../../../Alu_16BITS.srcs/sources_1/imports/Archivos Memoria/ALU1BIT.vhd" \
+"../../../../Alu_16BITS.srcs/sim_1/new/TB_Alu16BITS.vhd" \
+
+# Do not sort compile order
+nosort
