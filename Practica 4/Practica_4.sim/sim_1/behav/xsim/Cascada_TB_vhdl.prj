@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Practica_4.srcs/sources_1/new/SumadorCascada.vhd" \
+"../../../../Practica_4.srcs/sim_1/new/Cascada_TB.vhd" \
+
+# Do not sort compile order
+nosort
