@@ -1,0 +1,43 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity memoriaOP is
+    Port ( opCode : in STD_LOGIC_VECTOR (4 downto 0);
+           opCodeOut : out STD_LOGIC_VECTOR (19 downto 0));
+end memoriaOP;
+
+architecture Behavioral of memoriaOP is
+type mem is array(0 to 31) of std_logic_vector(19 downto 0);
+constant op : mem := (
+    "00001010000001110001",
+    "00000000010000000000",
+    "00000100010100001000",
+    "00001000000100110100",
+    "00001000000000110100",
+    "00000100010100110011",
+    "00000100010101110011",
+    "00000100010100000011",
+    "00000100010100010011",
+    "00000100010100100011",
+    "00000100010111010011",
+    "00000100010111000011",
+    "00000100010101000011",
+    "00110000001100110010",--
+    "00110000001100110010",
+    "00110000001100110010",
+    "00110000001100110011",
+    "00110000001100110011",
+    "00110000001100110011",--
+    "10100000000000000000",
+    "00100000000000000000",
+    "01000000000000000000",
+    "00000000000000000000",
+    others => (others => '0')
+);
+begin
+    
+    opCodeOut <= op(conv_integer(opCode));
+
+end Behavioral;
