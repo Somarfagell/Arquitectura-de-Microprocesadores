@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Practica 5.srcs/sources_1/new/SumRapido.vhd" \
+"../../../../Practica 5.srcs/sim_1/new/TB_Rapido.vhd" \
+
+# Do not sort compile order
+nosort
